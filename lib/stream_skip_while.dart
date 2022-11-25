@@ -1,6 +1,6 @@
 Future<void> main() async {
   Duration duration = Duration(seconds: 1);
-  //enquanto a condição for verdadeira, o valor de saída da stream não será imprimido
+  //enquanto a condição for verdadeira, o valor que chega na stream será ignorado
   Stream<int> stream = Stream<int>.periodic(duration, soma).skipWhile((valorRetornoInt) => valorRetornoInt < 5);
 
   await for (int valor in stream) {

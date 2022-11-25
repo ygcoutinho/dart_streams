@@ -1,6 +1,6 @@
 Future<void> main() async {
   Duration duration = Duration(milliseconds: 300);
-  //praticamente a mesma função do skip
+  //praticamente a mesma função do skip, mudando que a condição precisa ser verdadeira
   Stream<int> stream = Stream<int>.periodic(duration, soma).take(5).where((valor) => valor == 3);
 
   stream.listen((numero) {
